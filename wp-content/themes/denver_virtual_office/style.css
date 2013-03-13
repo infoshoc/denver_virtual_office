@@ -1,0 +1,495 @@
+﻿/*
+Theme Name: Denver Virtual Office's theme
+Theme URI: http://google.com/
+Description: Geekhub's homework
+Author: Infoshoc(Vladimir Polosukhin)
+Author URI: http://google.com/
+Version: 1.0
+*/
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; font:14px Arial, sans-serif; background:#fff url(../images/bg.jpg) repeat-x; color:#595959; }
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+	padding:0;
+	margin:0;
+	outline:none;
+	list-style:none;
+}
+select, input, textarea        { font-size:12px; vertical-align:middle; }
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a:link, a:visited              { font:14px Arial, sans-serif; color:#000; text-decoration:none; }
+a:hover                        { text-decoration:underline; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+@font-face {
+	font-family: EuropeExt;
+	src: url('../fonts/euroxn.eot');
+	src: url('../fonts/euroxn.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/euroxn.woff') format('woff'),
+			 url('../fonts/euroxn.ttf') format('truetype'),
+			 url('../fonts/euroxn.svg#euroxn') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}	
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrapper {
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 27px 0 0;
+	width: 1055px;
+	background: #fff;
+	line-height: 19px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header {
+	overflow: hidden;
+}
+.home .header {
+	margin: 0 0 25px;
+	min-height: 500px;
+	background: url(../images/home-header-bg.jpg) left 83px no-repeat;
+}
+.post .header {
+	margin: 0 0 33px;
+	min-height: 271px;
+	background: url(../images/post-header-bg.jpg) left bottom no-repeat;
+}
+.page .header {
+	margin: 0 0 24px;
+	min-height: 274px;
+	background: url(../images/page-header-bg.jpg) left bottom no-repeat;	
+}
+h1{
+	float: left;
+	margin: 0 0 0 36px;
+}
+.page h1 {
+	margin: 0 60px 0 36px;
+}
+.header .telephone {
+	float: right;
+	margin: 15px 41px 0 0;
+	padding: 5px 0 0 26px;
+	height: 31px;
+	background: url(../images/dark-telephone-img.jpg) left top no-repeat;
+	font-size: 24px;
+	color: #495B9D;
+}
+.home .header .telephone {
+	background: url(../images/telephone-img.jpg) left top no-repeat;
+	color: #1F93EB;
+}
+.page .telephone {
+	margin: 15px 41px 0 10px;
+}
+.header .navigation {
+	overflow: hidden;
+	text-align: center;
+}
+.home .header .navigation {
+	padding: 13px 0 0;
+}
+.header .navigation {
+	padding: 5px 0 0;
+}
+.header .navigation li {
+	border-left: 1px solid #ccc;
+	padding: 0;
+	display: inline-block;
+	padding: 5px 0 7px;
+}
+.header .navigation li:first-child{
+	border: none;
+}
+.header .navigation a{
+	display: block;
+}
+.home .header .navigation a {
+	min-height: 23px;
+	margin: 0;
+	padding: 0 12px;
+	font-size: 19px;
+	font-family: Arial, sans-serif;
+}
+.header .navigation a {
+	margin: 0 8px;
+	padding: 4px 15px 8px;
+	font-family: EuropeExt, "Courier New", sans-serif;
+	font-size: 17px;
+}
+.home .header .navigation .active a{
+	color: #1B3492;
+	background: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+.header .navigation .active a{
+	color: #fff;
+	background: url(../images/navigation-active-bg.jpg) center repeat-x;
+	border-radius: 17px;
+	-webkit-border-radius: 17px;
+	-moz-border-radius: 17px;
+}
+.header .video-block, .header .map-block{
+	display: block;
+	width: 360px; height: 189px;
+	float: right;
+	clear: right;
+}
+.header .video-block {
+	margin: 32px 0 0;
+	background: url(../images/video.jpg);
+}
+.header .map-block {
+	margin: 12px 0 0;
+	background: url(../images/map.jpg);
+}
+.header .features-list {
+	overflow: hidden;
+	clear: both;
+	border-bottom: 1px solid #D4D4D4;
+	padding: 20px 0 25px;
+}
+.header .features-list li {
+	overflow: hidden;
+	float: left;
+	width: 17%;
+	height: 55px;
+}
+.features-list .mail-item {
+	background: url(../images/freatures-icons-spirit.jpg) no-repeat;
+	padding: 0 0 0 89px;
+}
+.features-list .phone-item {
+	background: url(../images/freatures-icons-spirit.jpg) left -67px no-repeat;
+	padding: 0 0 0 72px;
+}
+.features-list .office-item {
+	background: url(../images/freatures-icons-spirit.jpg) left -133px no-repeat;
+	padding: 0 0 0 63px;
+}
+.features-list .room-item {
+	background: url(../images/freatures-icons-spirit.jpg) left -190px no-repeat;
+	padding: 0 0 0 85px;
+}
+.header .features-list h3 {
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #000;
+}
+.header .features-list p {
+	width: 111px;
+	color: #7B7B7B;
+	font-size: 10px;
+	line-height: 12px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content {
+	overflow: hidden;
+}
+.content h2 {
+	font-size: 32px;
+	color: #3D4F95;
+	font-weight: normal;
+}
+.page .content h2 {
+	padding: 0 0 10px;
+}
+.post .content p {
+	padding: 20px 0 0;
+}
+.page .content p {
+	margin: 10px 0 0;
+}
+.page .content a {
+	color: #3D50B9;
+}
+.benefits-block {
+	padding: 20px 18px 20px 16px;
+	background: #FFF6D4;
+}
+.benefits-block ul {
+	padding: 0 0 0 15px;
+}
+.benefits-block li {
+	list-style: disc inside;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------SIDEBAR--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.sidebar {
+	float: left;
+	width: 325px;
+	padding: 0 0 0 40px;
+}
+.sidebar .contact {
+	overflow: hidden;
+	border-radius: 5px;
+	border: 1px solid #C2C2C2;
+	margin: 40px 50px 0 0;
+}
+.sidebar .contact dt{
+	border-top: 1px solid #C2C2C2;
+	margin: -1px 0 0;
+	padding: 14px 50px 5px 16px;
+	color: #7A7B7F;
+}
+.sidebar .contact dd{
+	margin: -19px 15px 0 0;
+	padding: 19px 50px 15px 16px;
+	color: #3D4F95;
+	font-size: 24px;
+}
+.page .sidebar .contact dd {
+	margin: -19px 10px 0 0;
+}
+.sidebar .contact .phone-item {
+	background: url(../images/contact-icons-spirit.jpg) right 0 no-repeat;
+}
+.sidebar .contact .skype-item {
+	background: url(../images/contact-icons-spirit.jpg) right -53px no-repeat;
+}
+.sidebar .contact .email-item {
+	background: url(../images/contact-icons-spirit.jpg) right -91px no-repeat;
+}
+.page .sidebar .contact .email-item {
+	background: url(../images/contact-icons-spirit.jpg) right -100px no-repeat;
+}
+.sidebar .contact .more-item {
+	background: url(../images/contact-icons-spirit.jpg) right -155px no-repeat;
+}
+.sidebar .contact .email-item, .sidebar  .contact a{
+	font-size: 14px;
+	color: #3D4F95;
+}
+.sidebar .features-list  {
+	overflow: hidden;
+	padding: 0 52px 0 2px;
+}
+.sidebar .features-list li {
+	border-top: 1px solid #D2D2D5;
+	margin: -1px 0 19px;
+	padding: 19px 0 0 91px;
+}
+.sidebar .features-list .mail-item {
+	background: url(../images/freatures-icons-vertical-spirit.jpg) left 18px no-repeat;
+	min-height: 63px; max-height: 78px;
+}
+.sidebar .features-list .phone-item {
+	background: url(../images/freatures-icons-vertical-spirit.jpg) left -58px no-repeat;
+	min-height: 66px; max-height: 76px;
+}
+.sidebar .features-list .office-item {
+	background: url(../images/freatures-icons-vertical-spirit.jpg) left -133px no-repeat;
+	min-height: 57px; max-height: 65px;
+}
+.sidebar .features-list .room-item {
+	background: url(../images/freatures-icons-vertical-spirit.jpg) left -208px no-repeat;
+	min-height: 51px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.footer {
+	margin: 24px 36px;
+	clear: both;
+}
+.footer .oportunities-list {
+	overflow: hidden;
+}
+/*----------------------------------------------------------------------------------*/
+/*---------------------------------OPORTUNITIES-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.oportunities-list {
+	overflow: hidden;
+}
+.oportunities-list li {
+	overflow: hidden;
+	float: left;
+	width: 327px;
+}
+.oportunities-list a {
+	display: block;
+	margin: 8px 0 0;
+	width: 100%;
+	height: 149px;
+	background: url(../images/oportunities-bg.jpg);
+}
+.oportunities-list a:hover{
+	text-decoration: none;
+}
+.sign-up-item a {
+	border-radius: 0 9px 9px 0;
+	-moz-border-radius: 0 9px 9px 0;
+	-webkit-border-radius: 0 9px 9px 0;
+}
+.time-offer-item a {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 0;
+	height: 180px;
+	background: url(../images/limited-time-bg.jpg) repeat-x;
+}
+.virtual-office-item a {
+	border-radius: 9px 0 0 9px;
+	-moz-border-radius: 9px 0 0 9px;
+	-webkit-border-radius: 9px 0 0 9px;
+}
+.oportunities-list strong {
+	font-size: 25px;
+	font-family: EuropeExt,"Courier New", sans-serif;
+	display: block;
+	font-weight: normal;
+	text-align: right;
+	overflow: hidden;
+}
+.time-offer-item strong {
+	text-align: center;
+	padding: 19px 0 0;
+	min-height: 30px;
+}
+.oportunities-list .time-offer-item .p {
+	overflow: hidden;
+	font-size: 17px;
+	text-align: right;
+	line-height: 20px;
+	padding: 5px 0 0;
+	color: #fff;
+}
+.sign-up-item strong {
+	padding: 0 25px 0 0;
+}
+.oportunities-list span {
+	display: block;
+}
+.chair-img {
+	background: url(../images/chair-img.jpg);
+	margin: 11px -1px 0 0;
+	width: 131px; height: 138px;
+	float: left;
+}
+.clock-left-img {
+	background: url(../images/clock-left-img.jpg);
+	margin: 71px 0 0;
+	width: 12px; height: 70px;
+	float: right;
+}
+.clock-right-img {
+	background: url(../images/clock-right-img.jpg);
+	margin: 3px -29px 0 0;
+	width: 112px; height: 128px;
+	float: left;
+}
+.portrait-left-img {
+	background: url(../images/portrait-left-img.jpg);
+	margin: -27px 0 0 -15px;
+	width: 50px; height: 144px;
+	float: right;
+}
+.portrait-right-img {
+	background: url(../images/portrait-right-img.jpg);
+	width: 112px; height: 140px;
+	margin: -20px 0 0;
+}
+
+
+.post .footer {
+	border-top: 1px solid #D4D4D4;
+	margin: 40px 36px 24px;  
+	padding: 31px 0 0;
+}
+.footer .follow-txt {
+	padding: 13px 0 0;
+	float: left;
+	font-weight: bold;
+	font-size: 16px;
+	color: #585858;
+}
+.footer .social-list {
+	float: left;
+	overflow: hidden;
+	padding: 7px 27px 11px 0;
+	margin: 0 27px 0 0;
+}
+.home .footer .social-list {
+	border-right: 1px solid #ccc;
+}
+.footer .social-list li {
+	float: left;
+	margin: 0 0 0 12px;
+}
+.footer .social-list a {
+	display: block;
+	width: 29px; height: 29px;
+}
+.footer .social-list .twitter-item {
+	background: url(../images/social-icons-spirit.jpg);
+}
+.footer .social-list .facebook-item {
+	background: url(../images/social-icons-spirit.jpg) center top;
+}
+.footer .social-list .rss-item {
+	background: url(../images/social-icons-spirit.jpg) right top;
+}
+.footer p {
+	padding: 15px 0 0;
+}
+.footer .copyright {
+	padding: 8px 0 0 27px;
+	float: right;
+	color: #838383;
+	font-size: 12px;
+}
+.footer .facebook-widget {
+	float: right;
+	padding: 2px 0 0;
+	width: 155px; height: 23px;
+	background: url(../images/facebook-widget-placeholder.jpg);
+}
+.footer .navigation {
+	padding: 7px 0 0;
+	overflow: hidden;
+}
+.footer .navigation > li {
+	float: left;
+	width: 33%;
+}
+.footer .navigation h3 {
+	font-size: 12px;
+	color: #000;
+	text-transform: capitalize;
+}
+.footer .navigation a {
+	font-size: 12px;
+	color: #359BCB;
+}
