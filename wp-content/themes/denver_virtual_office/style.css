@@ -45,11 +45,11 @@ a:hover                        { text-decoration:underline; }
 .clear                         { clear:both; }
 @font-face {
 	font-family: EuropeExt;
-	src: url('../fonts/euroxn.eot');
-	src: url('../fonts/euroxn.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/euroxn.woff') format('woff'),
-			 url('../fonts/euroxn.ttf') format('truetype'),
-			 url('../fonts/euroxn.svg#euroxn') format('svg');
+	src: url('fonts/euroxn.eot');
+	src: url('fonts/euroxn.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/euroxn.woff') format('woff'),
+			 url('fonts/euroxn.ttf') format('truetype'),
+			 url('fonts/euroxn.svg#euroxn') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }	
